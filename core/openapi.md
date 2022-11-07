@@ -95,6 +95,9 @@ class OpenApiFactory implements OpenApiFactoryInterface
         $openApi = $openApi->withExtensionProperty('key', 'Custom x-key value');
         $openApi = $openApi->withExtensionProperty('x-value', 'Custom x-value value');
 
+        // to define base path URL
+        $openApi = $openApi->->withServers([new Server('https://foo.bar')]);
+        
         return $openApi;
     }
 }
